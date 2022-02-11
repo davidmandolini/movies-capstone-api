@@ -1,2 +1,8 @@
 class User < ApplicationRecord
+  has_many :nominations
+  has_many :themes
+  has_many :user_groups
+  has_many :groups, through: :user_groups
+  has_many :votes
+  has_many :created_groups, class_name: "Group"
 end
