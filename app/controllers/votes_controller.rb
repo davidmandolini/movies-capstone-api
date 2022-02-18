@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def create
     vote = Vote.new(
-      :user_id => params[:user_id],
+      :user_id => current_user.id,
       :nomination_id => params[:nomination_id],
     )
     vote.save
