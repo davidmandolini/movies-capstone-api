@@ -1,8 +1,8 @@
 class NominationsController < ApplicationController
-  def index
-    nominations = Nomination.all
-    render json: nominations
-  end
+  # def index
+  #   nominations = Nomination.all
+  #   render json: nominations
+  # end
 
   # def create
   #   nomination = Nomination.new(
@@ -16,10 +16,10 @@ class NominationsController < ApplicationController
   #   render json: nomination
   # end
 
-  def show
-    nomination = Nomination.find_by(:id => params[:id])
-    render json: nomination
-  end
+  # def show
+  #   nomination = Nomination.find_by(:id => params[:id])
+  #   render json: nomination
+  # end
 
   # def update
   #   nomination = Nomination.find_by(:id => params[:id])
