@@ -29,6 +29,16 @@ Authorization: Bearer {{jwt}}
 GET http://localhost:3000/groups/1
 Authorization: Bearer {{jwt}}
 
+### Nominations create
+POST http://localhost:3000/nominations
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+"name": "Texas Chainsaw Massacre",
+"event_id": 1
+}
+
 ### Votes create
 POST http://localhost:3000/votes
 Authorization: Bearer {{jwt}}
