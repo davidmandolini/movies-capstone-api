@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_11_024132) do
     t.integer "group_id"
     t.integer "theme_id"
     t.string "name"
+    t.boolean "voting_open?", default: true
     t.integer "user_id"
     t.datetime "date"
     t.datetime "created_at", null: false
