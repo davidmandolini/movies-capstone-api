@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    event = Event.where(:id => params[:id])
+    event = Event.find_by(:id => params[:id])
     render json: event
   end
 end

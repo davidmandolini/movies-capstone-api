@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   # delete "/groups/:id" => "groups#destroy"
 
   get "/events" => "events#index"
-
   # post "/events" => "events#create"
   get "/events/:id" => "events#show"
   # patch "/events/:id" => "events#update"

@@ -17,7 +17,7 @@ class NominationsController < ApplicationController
   end
 
   def show
-    nomination = Nomination.where(:id => params[:id])
+    nomination = Nomination.find_by(:id => params[:id])
     render json: nomination
   end
 
