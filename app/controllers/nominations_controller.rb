@@ -1,4 +1,9 @@
 class NominationsController < ApplicationController
+  def index
+    nominations = Nomination.all
+    render json: nominations
+  end
+
   def create
     nomination = Nomination.new(
       :user_id => current_user.id,
@@ -8,6 +13,11 @@ class NominationsController < ApplicationController
       :poster => params[:poster],
     )
     nomination.save
+    render json: nomination
+  end
+
+  def show
+    nomination = Nomination.where(:id => params[:id])
     render json: nomination
   end
 
