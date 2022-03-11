@@ -29,9 +29,13 @@ class NominationsController < ApplicationController
   #   render json: nomination
   # end
 
-  # def destroy
-  #   nomination = Nomination.find_by(:id => params[:id])
-  #   nomination.destroy
-  #   render json: { :message => "Nomination destroyed" }
-  # end
+  def destroy
+    nomination = Nomination.find_by(:id => params[:id])
+    if nomination.user_id == current_user.id
+      nomination.destroy
+      render json: { :message => "Nomination destroyed" }
+    else
+      render json: { :message => "Unauthorized" }
+    end
+  end
 end

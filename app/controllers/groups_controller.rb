@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    group = Group.find_by(:id => params[:id])
+    group = current_user.groups.find_by(:id => params[:id])
     render json: group
   end
 end
