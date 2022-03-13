@@ -20,22 +20,4 @@ class NominationsController < ApplicationController
     nomination = Nomination.find_by(:id => params[:id])
     render json: nomination
   end
-
-  # def update
-  #   nomination = Nomination.find_by(:id => params[:id])
-  #   nomination.name = params[:name] || nomination.name
-  #   nomination.trailer_url = params[:trailer_url] || nomination.trailer_url
-  #   nomination.poster = params[:poster] || nomination.poster
-  #   render json: nomination
-  # end
-
-  # def destroy
-  #   nomination = Nomination.find_by(:id => params[:id])
-  #   if nomination.user_id == current_user.id
-  #     nomination.destroy
-  #     render json: { :message => "Nomination destroyed" }
-  #   else
-  #     render json: { :message => "Unauthorized" }
-  #   end
-  # end
 end
