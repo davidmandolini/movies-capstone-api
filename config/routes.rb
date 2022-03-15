@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post "/nominations" => "nominations#create"
   get "/nominations/:id" => "nominations#show"
 
-  get "/searches" => "searches#index"
+  get "/searches/:expression" => "searches#index"
 
   post "/votes" => "votes#create"
 
