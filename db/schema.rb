@@ -34,17 +34,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_11_024132) do
 
   create_table "nominations", force: :cascade do |t|
     t.string "name"
+    t.string "year"
+    t.string "rating"
+    t.string "runtime"
+    t.string "genre"
+    t.string "director"
+    t.string "plot"
+    t.string "imdb_rating"
+    t.string "metacritic_rating"
     t.integer "user_id"
     t.integer "event_id"
-    t.string "trailer_url"
     t.string "poster"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "themes", force: :cascade do |t|
-    t.string "name"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -10,13 +10,14 @@ class NominationsController < ApplicationController
     nomination = Nomination.new(
       :user_id => current_user.id,
       :name => params[:name],
-      :year => movie["Year"].to_i,
+      :year => movie["Year"],
       :rating => movie["Rated"],
-      :runtime => movie["Runtime"].to_i,
+      :runtime => movie["Runtime"],
       :genre => movie["Genre"],
       :director => movie["Director"],
       :plot => movie["Plot"],
-      :reviews => movie["Ratings"],
+      :imdb_rating => movie["imdbRating"],
+      :metacritic_rating => movie["Metascore"],
       :event_id => params[:event_id],
       :poster => params[:image],
     )

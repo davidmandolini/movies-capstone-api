@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDcwNDY1NDR9.IGcAddTpTv4GJzde4swbNXtUaornchoNgdbQ4TL8Clo
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDczOTU0NTZ9.jcrmyUHAOjCATFlDh1CVM7wVq1vq-RbTcRd1agg510o
 
 ### Users create (signup)
 POST http://localhost:3000/users
@@ -33,6 +33,11 @@ Authorization: Bearer {{jwt}}
 POST http://localhost:3000/nominations
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
+
+{
+  "event_id": 1,
+  "name": "SpiderMan"
+}
 
 ### Nominations show
 GET http://localhost:3000/nominations/1
