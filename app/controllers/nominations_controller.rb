@@ -19,6 +19,7 @@ class NominationsController < ApplicationController
       :imdb_rating => movie["imdbRating"],
       :metacritic_rating => movie["Metascore"],
       :event_id => params[:event_id],
+      :trailer_url => "",
       :poster => params[:image],
     )
     nomination.save
@@ -27,6 +28,13 @@ class NominationsController < ApplicationController
 
   def show
     nomination = Nomination.find_by(:id => params[:id])
+    render json: nomination
+  end
+
+  def update
+    nomination = Nomination.find_by(:id => params[:id])
+    nomination.trailer_url = params[:trailer_url] || nomination.trailer_url
+    nomination.save
     render json: nomination
   end
 end

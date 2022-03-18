@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/nominations" => "nominations#index"
   post "/nominations" => "nominations#create"
   get "/nominations/:id" => "nominations#show"
+  patch "/nominations/:id" => "nominations#update"
 
   get "/searches/:expression" => "searches#index"
 
