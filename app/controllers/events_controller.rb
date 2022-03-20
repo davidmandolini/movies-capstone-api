@@ -8,4 +8,11 @@ class EventsController < ApplicationController
     event = Event.find_by(:id => params[:id])
     render json: event
   end
+
+  def update
+    event = Event.find_by(:id => params[:id])
+    event.status = params[:status] || events.status
+    event.save
+    render json: event
+  end
 end
