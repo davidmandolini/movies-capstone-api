@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get "/events/:id" => "events#show"
   patch "/events/:id" => "events#update"
 
-
   get "/nominations" => "nominations#index"
   post "/nominations" => "nominations#create"
   get "/nominations/:id" => "nominations#show"
@@ -19,6 +18,7 @@ Rails.application.routes.draw do
   get "/searches/:expression" => "searches#index"
 
   post "/votes" => "votes#create"
+  post "/user_ratings" => "user_ratings#create"
 
   # Defines the root path route ("/")
   # root "articles#index"
