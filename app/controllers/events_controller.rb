@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def show
     event = Event.find_by(:id => params[:id])
-    render json: event
+    render json: event, include: "nominations.user"
   end
 
   def update

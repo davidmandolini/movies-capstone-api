@@ -10,15 +10,16 @@ class Nomination < ApplicationRecord
       return id
     end
   end
+end
 
-  def average_rating
-    result = 0.0
-    if user_ratings
-      user_ratings.each do |rating|
-        result += rating.value
-      end
-      result = result / user_ratings.length
+def average_rating
+  result = 0.0
+  if user_ratings
+    user_ratings.each do |rating|
+      result += rating.value
     end
-    return result
+    result = result / user_ratings.length
+    result = result.round(1)
   end
+  return result
 end
