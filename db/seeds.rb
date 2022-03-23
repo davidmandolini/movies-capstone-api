@@ -16,7 +16,7 @@ User.create!(:username => "test", :email => "test@test.com", :password => "passw
 Group.create!(:name => "Cool Kids", :user_id => 1)
 Group.create!(:name => "Alternative Adults", :user_id => 2)
 Group.create!(:name => "Old 'n Bold", :user_id => 3)
-Group.create!(:name => "Test", :user_id => 1)
+Group.create!(:name => "Work Pals", :user_id => 1)
 
 UserGroup.create!(:user_id => 1, :group_id => 1)
 UserGroup.create!(:user_id => 1, :group_id => 2)
